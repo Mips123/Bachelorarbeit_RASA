@@ -60,6 +60,7 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - good, thanks
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -76,12 +77,6 @@ nlu:
     - extremely sad
     - so saad
     - so sad
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
 - intent: hello_world
   examples: |
     - Hello World
@@ -101,6 +96,8 @@ nlu:
     - My name is [Stefan](userName)
     - Call me [Peter](userName)
     - My name is [Oliver](userName)
+    - My name is [Julian](userName)
+    - My name is [Lukas](userName)
 - intent: set_professionalSoftwareDevelopment
   examples: |
     - Professional software development can be described with [programming as side activity](professionalSoftwareDevelopment) and [professional programming](professionalSoftwareDevelopment)
@@ -136,6 +133,7 @@ nlu:
     - There are two types of software. [Generic software](softwareTypes) and [bespoke software](softwareTypes)
     - The two types of software are [bespoke software](softwareTypes) and [generic software](softwareTypes)
     - The types of software are [bespoke software](softwareTypes) and [generic software](softwareTypes)
+    - Two types of software are [customized software](softwareTypes) and [generic software](softwareTypes)
 - intent: get_softwareTypes
   examples: |
     - What software types are there?
@@ -232,8 +230,8 @@ nlu:
   examples: |
     - What have we learned today?
     - Give me all the learned content of today.
-    - Tell me everything you know. 
-    - Learned content. 
+    - Tell me everything you know.
+    - Learned content.
     - Done for today.
 - intent: get_learned_content_of_specific_topic
   examples: |

@@ -46,7 +46,7 @@ class ActionGetInformationSoftwareType(Action):
         if information_learned:
             dispatcher.utter_message(text=f"Learned content for {search_value} is: {information_learned}")
         else:
-            dispatcher.utter_message(f"No {search_value} are specified.")
+            dispatcher.utter_message(f"No information about {search_value} learned so far.")
 
         return []
 
@@ -176,6 +176,7 @@ class ActionGetInformationSoftware(Action):
 
         return []
 
+
 # this function only return the set of information about a certain topic - softwareEngineeringDisciplines
 class ActionGetSoftwareEngineeringDisciplines(Action):
     def name(self) -> Text:
@@ -237,12 +238,14 @@ class ActionGetAllLearnedContent(Action):
                 slot_values[slot_name] = slot_value
 
         # Print the non-None slot values
+        dispatcher.utter_message(text="Here is what we have learned today: \n")
         for slot_name, slot_value in slot_values.items():
             dispatcher.utter_message(text=f"{slot_name}: {slot_value}")
 
         # Save the non-None slot values in a JSON file
-        with open('slot_values.json', 'w') as file:
+        with open('learned_content.json', 'w') as file:
             json.dump(slot_values, file)
+            dispatcher.utter_message(text="The learned content can be found in the file: learned_content.json")
 
         return []
 
